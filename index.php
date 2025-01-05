@@ -240,20 +240,3 @@ if (!empty($_FILES) and isset($_GET['upload']) == true) {
 <script>
     var load_drz = new Dropzone("form#DropzoneFrom", {
         autoProcessQueue: false,
-        maxFilesize: 5,
-        parallelUploads: 1,
-        acceptedFiles: ".jpeg,.jpg,.png,.gif",
-        init: function() {
-            var submitButton = document.querySelector('.upload_file');
-            myDropzone = this;
-            submitButton.addEventListener("click", function() {
-                myDropzone.processQueue();
-            });
-        },
-        success: function(file, response) {
-            $('.output').html(response);
-        },
-    });
-</script>
-
-</html>
